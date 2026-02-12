@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Valentine ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      margin-top: 20px;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    /* Love letter */
+    .letter {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Valentine button */
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .yes {
+      background: #fff;
+      color: #ff4d6d;
+    }
+
+    .no {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      position: relative;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎵 Optional background music -->
+  <!-- Replace song.mp3 with your file -->
+  <!--
+  <audio autoplay loop>
+    <source src="Lady Gaga, Bruno Mars - Die With A Smile.mp3" type="audio/mpeg">
+  </audio>
+  -->
+
+  <div class="section">
+    <h1>Hi Rittick ❤️</h1>
+    <h2>This page is just for you</h2>
+    <p>Scroll slowly… I made this with all my heart 💘</p>
+  </div>
+
+  <div class="section">
+    <h2>💌 A Letter For You</h2>
+    <div class="letter">
+      <p>
+	It's been 14 years that we are together and not a day goes by
+	where I don't feel butteflies in my stomach when I see you!
+        From the moment you walked into my life, everything became warmer,
+        brighter, and happier.  
+        You are my comfort, my laughter, my safe place, my mutton to your aloo
+	and my favorite person.
+      </p>
+      <p>
+        Thank you for loving me the way you do.  
+        I choose you — today, tomorrow, and always ❤️
+      </p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📸 Our Memories</h2>
+    <div class="gallery">
+      <img src="WhatsApp Image 2026-02-12 at 23.11.04">
+      <img src="WhatsApp Image 2026-02-12 at 23.11.30">
+      <img src="WhatsApp Image 2026-02-12 at 23.05.35">
+      <img src="WhatsApp Image 2026-02-12 at 23.02.09">
+      <img src="WhatsApp Image 2026-02-12 at 23.01.41">
+      <img src="WhatsApp Image 2026-02-12 at 23.01.23">
+      <img src="WhatsApp Image 2026-02-12 at 23.00.53">
+    </div>
+     </div>
+
+  <div class="section">
+    <h2>💖 Will You Be My Valentine?</h2>
+    <div class="buttons">
+      <button class="yes" onclick="yesClicked()">YES 💍</button>
+      <button class="no" onmouseover="moveNo()">NO 🙃</button>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by me, for you
+  </footer>
+
+  <script>
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }, 300);
+
+    function moveNo() {
+      const noBtn = document.querySelector(".no");
+      noBtn.style.top = Math.random() * 200 - 100 + "px";
+      noBtn.style.left = Math.random() * 200 - 100 + "px";
+    }
+
+    function yesClicked() {
+      alert("YAY!!! 💖 I knew it 😘 Happy Valentine's Day!");
+    }
+  </script>
+
+</body>
+</html>
