@@ -106,9 +106,15 @@
 
 <body>
 
-  <audio controls loop>
+  <audio id="bgMusic" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  window.addEventListener("click", function() {
+      document.getElementById("bgMusic").play();
+  }, { once: true });
+</script>
 
   <div class="section">
     <h1>Hi Rittick ❤️</h1>
@@ -186,5 +192,6 @@
 
 </body>
 </html>
+
 
 
